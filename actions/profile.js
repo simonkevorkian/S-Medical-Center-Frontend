@@ -13,7 +13,7 @@ fetch(`https://s-medical-center.onrender.com/doctors/${doctorId}`)
     widget.innerHTML = `
       <div class="doc-info-left">
         <div class="doctor-img">
-          <img src="assets/img/doctors/doctor-01.jpg" class="img-fluid" alt="User Image">
+          <img src="https://github.com/simonkevorkian/S-Medical-Center-Frontend/blob/main/assets/img/doctors/doctor-01.png?raw=true" class="img-fluid" alt="User Image">
         </div>
         <div class="doc-info-cont">
           <h4 class="doc-name">${doctor.name}</h4>
