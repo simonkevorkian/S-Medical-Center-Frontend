@@ -28,7 +28,7 @@ loginForm.addEventListener("submit", async (event) => {
 
       if (user) {
         if (user.user_type === "doctor") {
-          warningMessage.textContent = `You are logging in with a doctor account, please direct to <a href="login-doctor.html"> doctor login</a>.`;
+          warningMessage.textContent = `You are logging in with a doctor account, please direct to doctor login.`;
         } else {
           // Fetch additional patient data
           let patientResponse = await fetch(
