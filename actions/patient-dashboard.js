@@ -45,7 +45,7 @@ fetch("https://s-medical-center.onrender.com/doctors")
             row.innerHTML = `<td>
             <h2 class="table-avatar">
                 <a href="#" class="avatar avatar-sm mr-2">
-                    <img class="avatar-img rounded-circle" src="assets/img/doctors/doctor-01.jpg" alt="User Image">
+                    <img class="avatar-img rounded-circle" src="https://github.com/simonkevorkian/S-Medical-Center-Frontend/blob/main/assets/img/doctors/doctor-01.png?raw=true" alt="User Image">
                 </a>
                 <a href="#">${doctor.name} <span>${doctor.specialty}</span></a>
             </h2>
@@ -88,7 +88,7 @@ fetch("https://s-medical-center.onrender.com/doctors")
             row.innerHTML = `<td>
 							<h2 class="table-avatar">
                             <a href="#" class="avatar avatar-sm mr-2">
-                                <img class="avatar-img rounded-circle" src="assets/img/doctors/doctor-01.jpg" alt="User Image">
+                                <img class="avatar-img rounded-circle" src="https://github.com/simonkevorkian/S-Medical-Center-Frontend/blob/main/assets/img/doctors/doctor-01.png?raw=true" alt="User Image">
                             </a>
                             <a href="#">${doctor.name} <span>${doctor.specialty}</span></a>
                         </h2>
