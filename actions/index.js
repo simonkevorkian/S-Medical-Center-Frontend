@@ -29,7 +29,7 @@ async function loadDoctors() {
         <img
           class="img-fluid"
           alt="User Image"
-          src="assets/img/doctors/doctor-01.jpg"
+          src="https://github.com/simonkevorkian/S-Medical-Center-Frontend/blob/main/assets/img/doctors/doctor-01.png?raw=true"
         />
       </a>
     </div>
