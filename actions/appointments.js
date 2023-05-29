@@ -30,7 +30,7 @@ fetch(`https://s-medical-center.onrender.com/appointments/doctor/${userId}`)
       const appointmentDateTime = new Date(`${date} ${time}`);
 
       // Check if the appointment is after the current time
-      fetch(`https://s-medical-center.onrender.com/appointments/patients/${patientID}`)
+      fetch(`https://s-medical-center.onrender.com/appointments/patient/${patientID}`)
         .then((response) => response.json())
         .then((user) => {
           appointmentContainer.innerHTML = `<div class="profile-info-widget">
@@ -76,7 +76,7 @@ fetch(`https://s-medical-center.onrender.com/appointments/doctor/${userId}`)
 
 function deleteRequest(appointmentId) {
   // Make an HTTP DELETE request to the API endpoint
-  fetch(`https://s-medical-center.onrender.com/appointments/appointments/${appointmentId}`, {
+  fetch(`https://s-medical-center.onrender.com/appointments/${appointmentId}`, {
     method: "DELETE",
   })
     .then((response) => response.json())
