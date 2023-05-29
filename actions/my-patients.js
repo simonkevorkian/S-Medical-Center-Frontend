@@ -10,7 +10,7 @@ document.querySelector(
 const userId = doctor.id;
 
 // Make an HTTP GET request to the API endpoint
-fetch(`https://s-medical-center.onrender.com/appointments/doctor/${userId}`)
+fetch(`https://s-medical-center.onrender.com/requests/doctor/${userId}`)
   .then((response) => response.json())
   .then((data) => {
     // Get the appointment list container element
