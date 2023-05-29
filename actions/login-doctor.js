@@ -51,7 +51,7 @@ loginForm.addEventListener("submit", async (event) => {
 
           // If the user is found, store user data in localStorage
           localStorage.setItem("user", JSON.stringify(fullUser));
-          window.location.href = https://simonkevorkian.github.io/S-Medical-Center-Frontend/doctor-dashboard.html;
+          window.location.href = "https://simonkevorkian.github.io/S-Medical-Center-Frontend/doctor-dashboard.html";
         } else {
           warningMessage.textContent = "Error retrieving additional user data.";
         }
