@@ -29,7 +29,7 @@ window.onload = async function () {
       <div class="doctor-img">
         <a href="doctor-profile.html">
           <img
-            src="assets/img/doctors/doctor-01.jpg"
+            src="https://github.com/simonkevorkian/S-Medical-Center-Frontend/blob/main/assets/img/doctors/doctor-01.png?raw=true"
             class="img-fluid"
             alt="User Image"
           />
@@ -140,7 +140,7 @@ searchButton.addEventListener("click", async (e) => {
       <div class="doc-info-left">
         <div class="doctor-img">
           <a href="doctor-profile.html">
-            <img src="assets/img/doctors/doctor-01.jpg" class="img-fluid" alt="User Image"/>
+            <img src="https://github.com/simonkevorkian/S-Medical-Center-Frontend/blob/main/assets/img/doctors/doctor-01.png?raw=true" class="img-fluid" alt="User Image"/>
           </a>
         </div>
         <div class="doc-info-cont">
