@@ -14,7 +14,7 @@ fetch(`https://s-medical-center.onrender.com/doctors/${doctorId}`)
     widget.innerHTML = `
     <a href="doctor-profile.html" class="booking-doc-img">
     <img
-      src="assets/img/doctors/doctor-01.jpg"
+      src="https://github.com/simonkevorkian/S-Medical-Center-Frontend/blob/main/assets/img/doctors/doctor-01.png?raw=true"
       alt="User Image"
     />
   </a>
