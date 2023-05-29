@@ -57,7 +57,7 @@ fetch(`https://s-medical-center.onrender.com/requests/doctor/${userId}`)
                 </div>
                 <div class="patient-info">
                   <ul>
-                    <li>Email <span>${user.email}</span></li>
+                    <li> <span>${user.email}</span></li>
                   </ul>
                 </div>
               </div>
