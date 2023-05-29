@@ -30,7 +30,7 @@ fetch(`https://s-medical-center.onrender.com/appointments/doctor/${userId}`)
       const appointmentDateTime = new Date(`${date} ${time}`);
 
       // Check if the appointment is after the current time
-      fetch(`https://s-medical-center.onrender.com/appointments/patient/${patientID}`)
+      fetch(`https://s-medical-center.onrender.com/patients/${patientID}`)
         .then((response) => response.json())
         .then((user) => {
           appointmentContainer.innerHTML = `<div class="profile-info-widget">
