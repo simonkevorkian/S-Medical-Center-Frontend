@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>S-Medical Center</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=0"
+    />
+
+    <link href="assets/img/favicon.png" rel="icon" />
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+    <link
+      rel="stylesheet"
+      href="assets/plugins/fontawesome/css/fontawesome.min.css"
+    />
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css" />
+
+    <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css" />
+
+    <link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css" />
+
+    <link
+      rel="stylesheet"
+      href="assets/plugins/fancybox/jquery.fancybox.min.css"
+    />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Main Wrapper -->
+    <div class="main-wrapper">
+      <!-- Header -->
+      <header class="header">
+        <nav class="navbar navbar-expand-lg header-nav">
+          <div class="navbar-header">
+            <a id="mobile_btn" href="javascript:void(0);">
+              <span class="bar-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </a>
+            <a href="main-page.html" class="navbar-brand logo">
+              <img src="assets/img/logo.png" class="img-fluid" alt="Logo" />
+            </a>
+          </div>
+          <div class="main-menu-wrapper">
+            <div class="menu-header">
+              <a href="main-page.html" class="menu-logo">
+                <img src="assets/img/logo.png" class="img-fluid" alt="Logo" />
+              </a>
+              <a id="menu_close" class="menu-close" href="javascript:void(0);">
+                <i class="fas fa-times"></i>
+              </a>
+            </div>
+            <ul class="main-nav">
+              <li class="active">
+                <a href="main-page.html">Home</a>
+              </li>
+              
+              <li class="has-submenu">
+                <a href="#">Patients <i class="fas fa-chevron-down"></i></a>
+                <ul class="submenu">
+                  <li><a href="search.html">Search Doctor</a></li>
+                  <li><a href="patient-dashboard.html" >My appointments and requests</a></li>
+                  <li><a href="profile-settings.html">Profile Settings</a></li>
+                  
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <ul class="nav header-navbar-rht"></ul>
+        </nav>
+      </header>
+      <!-- /Header -->
+
+      <!-- Breadcrumb -->
+      <div class="breadcrumb-bar">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col-md-8 col-12">
+              <nav aria-label="breadcrumb" class="page-breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="main-page.html">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Search
+                  </li>
+                  <li>
+                    <!-- Search -->
+                    <div class="search-box">
+                      <form action="">
+                        
+                        <div class="form-group search-info">
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Search Doctors, Clinics, Hospitals, Diseases Etc"
+                          />
+                          <span class="form-text text-light"
+                            >Enter name, location, phone number or speciality</span
+                          >
+                        </div>
+                        <button
+                          type="submit"
+                          class="btn btn-primary search-btn"
+                        >
+                          <i class="fas fa-search"></i> <span>Search</span>
+                        </button>
+                      </form>
+                    </div>
+                    <!-- /Search -->
+                  </li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Breadcrumb -->
+
+      <!-- Page Content -->
+      <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12 col-lg-8 col-xl-9 custom-dr">
+              
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Page Content -->
+
+      <!-- Footer -->
+      <footer class="footer">
+        <!-- Footer Top -->
+        <div class="footer-top">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-3 col-md-6">
+                <!-- Footer Widget -->
+                <div class="footer-widget footer-about">
+                  <div class="footer-logo">
+                    <img src="assets/img/footer-logo.png" alt="logo" />
+                  </div>
+                  <div class="footer-about-content">
+                    <p>
+                      © 2023 [S-Medical Center]. All rights reserved. The content on this site is for educational
+                      purposes only and should not be considered medical advice.
+                      Please consult a qualified healthcare professional for
+                      personalized medical guidance. We make no warranties or representations, express or
+                      implied, regarding the completeness, accuracy,
+                      reliability, suitability, or availability of the website
+                      or the information, products, services, or related
+                      graphics contained on the website. By using this site, you
+                      agree to our Terms of Service and Privacy Policy.
+                    </p>
+                    
+                  </div>
+                </div>
+                <!-- /Footer Widget -->
+              </div>
+
+              <div class="col-lg-3 col-md-6">
+                <!-- Footer Widget -->
+                <div class="footer-widget footer-menu">
+                  <h2 class="footer-title">For Patients</h2>
+                  <ul>
+                    <li>
+                      <a href="search.html"
+                        ><i class="fas fa-angle-double-right"></i> Search for
+                        Doctors</a
+                      >
+                    </li>
+                    <li>
+                      <a href="patient-dashboard.html"
+                        ><i class="fas fa-angle-double-right"></i> My appointments and requests</a
+                      >
+                    </li>
+                    <li>
+                      <a href="profile-settings.html"
+                        ><i class="fas fa-angle-double-right"></i> My Profile Settings</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <!-- /Footer Widget -->
+              </div>
+
+              
+            </div>
+          </div>
+        </div>
+        <!-- /Footer Top -->
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <div class="container-fluid">
+            <!-- Copyright -->
+            <div class="copyright">
+              <div class="row">
+                <div class="col-md-6 col-lg-6"></div>
+                <div class="col-md-6 col-lg-6">
+                  <!-- Copyright Menu -->
+                  <div class="copyright-menu">
+                    <ul class="policy-menu">
+                      <li>
+                        <a href="term-condition.html">Terms and Conditions</a>
+                      </li>
+                      <li><a href="privacy-policy.html">Policy</a></li>
+                    </ul>
+                  </div>
+                  <!-- /Copyright Menu -->
+                </div>
+              </div>
+            </div>
+            <!-- /Copyright -->
+          </div>
+        </div>
+        <!-- /Footer Bottom -->
+      </footer>
+      <!-- /Footer -->
+    </div>
+    <!-- /Main Wrapper -->
+
+    <script src="assets/js/jquery.min.js"></script>
+
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <script src="assets/plugins/theia-sticky-sidebar/ResizeSensor.js"></script>
+    <script src="assets/plugins/theia-sticky-sidebar/theia-sticky-sidebar.js"></script>
+
+    <script src="assets/plugins/select2/js/select2.min.js"></script>
+
+    <script src="assets/js/moment.min.js"></script>
+    <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+
+    <script src="assets/plugins/fancybox/jquery.fancybox.min.js"></script>
+
+    <script src="assets/js/script.js"></script>
+    <script src="actions/search.js"></script>
+  </body>
+
+</html>
