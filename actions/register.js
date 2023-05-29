@@ -63,7 +63,7 @@ function addUser() {
     .then(async (response) => {
       if (response.ok) {
         localStorage.setItem('user', JSON.stringify(payload));
-        window.location.href = "/index.html";
+        window.location.href = "https://simonkevorkian.github.io/S-Medical-Center-Frontend/index.html";
 
         return response.json();
       } else {
