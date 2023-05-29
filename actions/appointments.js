@@ -51,7 +51,7 @@ fetch(`https://s-medical-center.onrender.com/appointments/doctor/${userId}`)
             <i class="fas fa-envelope"></i> ${user.email}
           </h5>
           
-          <button type="button" class="btn btn-rounded btn-primary deleteButton">Done</button>
+          <button type="button" class="btn btn-rounded btn-primary" id="deleteButton">Done</button>
 
         </div>
       </div>
