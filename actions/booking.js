@@ -32,6 +32,25 @@ fetch(`https://s-medical-center.onrender.com/doctors/${doctorId}`)
   </div>
     `;
     doctor_id = doctor.id;
+
+    console.log(doctor.calendly);
+    if (doctor.calendly === "") {
+      document.getElementById("calendly-widget1").style.display = "none" ;
+      document.getElementById("calendly-widget").textContent = "The doctor does not have a calendly account yet" ;
+
+    } else {
+      // Select the HTML element
+      const calendlyWidget = document.getElementById("calendly-widget");
+
+      // Update the data-url attribute value
+      calendlyWidget.innerHTML = `
+      <div
+                class="calendly-inline-widget"
+                id="calendly-widget"
+                data-url="${doctor.calendly}"
+                style="min-width: 320px; height: 700px"
+              ></div>`;
+    }
   });
 
 let today = new Date().toISOString().split("T")[0];
@@ -43,7 +62,7 @@ document
   .getElementById("appointment-time")
   .addEventListener("input", function (e) {
     let inputTime = this.value;
-    
+
     warningMessage.style.color = "red";
 
     if (inputTime < "09:00" || inputTime > "18:00") {
@@ -61,16 +80,14 @@ bookingButton.addEventListener("click", async () => {
   let patient = JSON.parse(localStorage.getItem("user"));
   let patient_id = patient.id;
 
-
-
-  
   // Get date and time from form inputs
   let appointmentDate = document.getElementById("appointment-date").value;
   let appointmentTime = document.getElementById("appointment-time").value;
 
-
   // Combine date and time into a single string
-  let request_date = `${appointmentDate}T${document.getElementById("appointment-time").value}`;
+  let request_date = `${appointmentDate}T${
+    document.getElementById("appointment-time").value
+  }`;
 
   console.log(request_date);
   // Prepare data to be sent
@@ -83,13 +100,16 @@ bookingButton.addEventListener("click", async () => {
 
   // Make HTTP request
   try {
-    let response = await fetch("https://s-medical-center.onrender.com/requests", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(requestData),
-    });
+    let response = await fetch(
+      "https://s-medical-center.onrender.com/requests",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(requestData),
+      }
+    );
 
     if (response.ok) {
       // If the request was successful, show a success message
@@ -105,6 +125,5 @@ bookingButton.addEventListener("click", async () => {
     alert("An error occurred.");
   }
 });
-
 
 console.log(document.getElementById("appointment-time").value);
