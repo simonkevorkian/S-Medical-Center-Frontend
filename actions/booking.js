@@ -35,8 +35,8 @@ fetch(`https://s-medical-center.onrender.com/doctors/${doctorId}`)
 
     console.log(doctor.calendly);
     if (doctor.calendly === "") {
-      document.getElementById("calendly-widget1").style.display = "none" ;
-      document.getElementById("calendly-widget").textContent = "The doctor does not have a calendly account yet" ;
+      document.getElementById("calendly-widget").style.display = "none" ;
+      document.getElementById("calendlyh").textContent = "The doctor does not have a calendly account yet" ;
 
     } else {
       // Select the HTML element
