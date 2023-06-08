@@ -121,7 +121,7 @@ bookingButton.addEventListener("click", async () => {
       console.log(doctor_email);
 
       Email.send({
-        SecureToken: "ba51a9f6-331f-4aea-977f-beb6aa8525d7",
+        SecureToken: "0c6c8318-eb18-4992-8d94-c7def8abbec3",
         To: `${doctor_email}`,
         From: "s.medical.center.org@gmail.com",
         Subject: "Appointment request",
