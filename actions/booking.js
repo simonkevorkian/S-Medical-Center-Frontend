@@ -2,6 +2,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const doctorId = urlParams.get("doctorId");
 var doctor_id;
+var doctor_email;
 let warningMessage = document.getElementById("warningMessage");
 // Fetch the data for the specific doctor
 fetch(`https://s-medical-center.onrender.com/doctors/${doctorId}`)
@@ -32,12 +33,13 @@ fetch(`https://s-medical-center.onrender.com/doctors/${doctorId}`)
   </div>
     `;
     doctor_id = doctor.id;
+    doctor_email = doctor.email;
 
     console.log(doctor.calendly);
     if (doctor.calendly === "") {
-      document.getElementById("calendly-widget").style.display = "none" ;
-      document.getElementById("calendlyh").textContent = "The doctor does not have a calendly account yet" ;
-
+      document.getElementById("calendly-widget").style.display = "none";
+      document.getElementById("calendlyh").textContent =
+        "The doctor does not have a calendly account yet";
     } else {
       // Select the HTML element
       const calendlyWidget = document.getElementById("calendly-widget");
@@ -115,6 +117,21 @@ bookingButton.addEventListener("click", async () => {
       // If the request was successful, show a success message
       warningMessage.style.color = "green";
       warningMessage.textContent = "Appointment requested successfully!";
+
+      console.log(doctor_email);
+
+      Email.send({
+        SecureToken: "9a4bae1a-4f14-417b-a866-d75a4f650e49",
+        To: `${doctor_email}`,
+        From: "s.medical.center.org@gmail.com",
+        Subject: "Appointment request",
+        Body: `${patient.username} has requested an appointment. Please check your S-Medical-Center dashboard.`,
+      }).then((message) => alert(message));
+
+      console.log("done");
+
+
+
     } else {
       // If there was an error, show it
       let errorMessage = await response.text();
