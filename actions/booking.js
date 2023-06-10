@@ -42,7 +42,7 @@ fetch(`https://s-medical-center.onrender.com/doctors/${doctorId}`)
         "The doctor does not have a calendly account yet";
     } else {
       // Select the HTML element
-      const calendlyWidget = document.getElementById("calendly-widget");
+      const calendlyWidget = document.getElementById("calendly-widget1");
 
       // Update the data-url attribute value
       calendlyWidget.innerHTML = `
