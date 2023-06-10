@@ -51,7 +51,13 @@ fetch(`https://s-medical-center.onrender.com/doctors/${doctorId}`)
                 id="calendly-widget"
                 data-url="${doctor.calendly}"
                 style="min-width: 320px; height: 700px"
-              ></div>`;
+              ></div>
+              
+              <script
+      type="text/javascript"
+      src="https://assets.calendly.com/assets/external/widget.js"
+      async
+    ></script>`;
     }
   });
 
