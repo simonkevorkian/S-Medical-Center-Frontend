@@ -64,7 +64,7 @@ fetch(`https://s-medical-center.onrender.com/messages/${user_id}/${doctorId}`)
       </div>
 
       <div>
-        ${message.date.slice(11, 16)}
+        ${message.date}
       </div>
       `;
         chatList.appendChild(newMessage);
