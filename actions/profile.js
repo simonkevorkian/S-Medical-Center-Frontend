@@ -70,6 +70,8 @@ fetch(`https://s-medical-center.onrender.com/messages/${user_id}/${doctorId}`)
         chatList.appendChild(newMessage);
       }
     });
+    chatList.scrollTop = chatList.scrollHeight - chatList.clientHeight;
+
   })
   .catch((error) => console.error("Error:", error));
 

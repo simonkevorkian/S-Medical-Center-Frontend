@@ -60,6 +60,10 @@ fetch(`https://s-medical-center.onrender.com/requests/doctor/${userId}`)
                     <li> <span>${user.email}</span></li>
                   </ul>
                 </div>
+
+                <button class = "p-chat-btn btn btn-primary">
+                <a class="" href="doctor-chat.html?doctorId=${patientID}&patientname=${user.username}">Chat now</a>
+                </button>
               </div>
             </div>
           `;

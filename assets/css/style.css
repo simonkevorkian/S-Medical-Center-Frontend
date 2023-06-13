@@ -4139,7 +4139,6 @@ html.menu-opened body {
 }
 .patient-info ul li span {
   color: #757575;
-  float: right;
   font-weight: 400;
 }
 
@@ -4188,6 +4187,11 @@ html.menu-opened body {
 .sign-name {
   width: 100%;
   float: right;
+}
+.pat-widget-profile .card-body{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 .pat-widget-profile .pro-widget-content {
   padding: 0 0 20px;
@@ -6966,7 +6970,7 @@ html.menu-opened body {
 .s-chat {
   width: 100%;
   height: 600px;
-  margin: 50px 0;
+  margin: 0 0 50px 0;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -7022,4 +7026,15 @@ html.menu-opened body {
 .p-chat {
   background-color: #8bf9b5;
   color: #000;
+
+}
+
+.dp-chat{
+  display: flex;
+}
+
+.p-chat-btn{
+  text-align: center;
+  width: fit-content;
+  margin: 10px;
 }
