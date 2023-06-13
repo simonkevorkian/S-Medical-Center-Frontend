@@ -34,7 +34,7 @@ fetch(`https://s-medical-center.onrender.com/messages/${user_id}/${doctorId}`)
       </div>
 
       <div>
-        ${message.date.slice(11, 16)}
+        ${message.date}
       </div>
       `;
         chatList.appendChild(newMessage);
@@ -54,7 +54,7 @@ sendButton.addEventListener("click", function () {
   var now = new Date();
   var hours = String(now.getHours()).padStart(2, "0");
   var minutes = String(now.getMinutes()).padStart(2, "0");
-  var date = hours + ":" + minutes;
+  var datenow = hours + ":" + minutes;
 
   if (messageText.trim() === "") {
     // Warn that the message is empty
@@ -69,7 +69,7 @@ sendButton.addEventListener("click", function () {
   </div>
 
   <div>
-    ${date}
+    ${datenow}
   </div>
   `;
     chatList.appendChild(newMessage);
@@ -81,7 +81,7 @@ sendButton.addEventListener("click", function () {
     var messageData = {
       fromID: doctorId,
       toID: user_id,
-      date : date,
+      date : datenow,
       message: messageText,
     };
 
