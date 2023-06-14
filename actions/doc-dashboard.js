@@ -67,7 +67,6 @@ fetch(`https://s-medical-center.onrender.com/appointments/doctor/${userId}`)
     console.error("Error:", error);
   });
 
-var patient_email;
 // Make an HTTP GET request to the API endpoint
 fetch(`https://s-medical-center.onrender.com/requests/doctor/${userId}`)
   .then((response) => response.json())
@@ -101,7 +100,6 @@ fetch(`https://s-medical-center.onrender.com/requests/doctor/${userId}`)
             const nameLink = document.createElement("a");
             nameLink.href = "#";
             nameLink.textContent = ` ${user.username}`;
-            patient_email = user.email;
             nameCell.appendChild(nameLink);
             row.appendChild(nameCell);
 
