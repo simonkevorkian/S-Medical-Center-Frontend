@@ -67,7 +67,6 @@ fetch(`https://s-medical-center.onrender.com/appointments/doctor/${userId}`)
     console.error("Error:", error);
   });
 
-var patient_email;
 // Make an HTTP GET request to the API endpoint
 fetch(`https://s-medical-center.onrender.com/requests/doctor/${userId}`)
   .then((response) => response.json())
@@ -101,7 +100,6 @@ fetch(`https://s-medical-center.onrender.com/requests/doctor/${userId}`)
             const nameLink = document.createElement("a");
             nameLink.href = "#";
             nameLink.textContent = ` ${user.username}`;
-            patient_email = user.username;
             nameCell.appendChild(nameLink);
             row.appendChild(nameCell);
 
@@ -137,7 +135,7 @@ fetch(`https://s-medical-center.onrender.com/requests/doctor/${userId}`)
 
             // Add event listener to accept the request
             acceptButton.addEventListener("click", () => {
-              acceptRequest(request.id, date, time);
+              acceptRequest(request.id, date, time,user.email);
             });
 
             actionsCell.appendChild(acceptButton);
@@ -150,7 +148,7 @@ fetch(`https://s-medical-center.onrender.com/requests/doctor/${userId}`)
 
             // Add event listener to delete the request
             deleteButton.addEventListener("click", () => {
-              deleteRequest(request.id);
+              deleteRequest(request.id,user.email);
             });
 
             actionsCell.appendChild(deleteButton);
@@ -171,12 +169,13 @@ fetch(`https://s-medical-center.onrender.com/requests/doctor/${userId}`)
   });
 
 // Function to delete a request by its ID
-const deleteRequest = (requestId) => {
+const deleteRequest = (requestId,tomail) => {
   var params = {
-    to_name: patient_email,
+    to: tomail,
     doctor_name: doctor.name,
     status: "rejected",
   };
+
 
   const serviceID = "service_tukqhvw";
   const templateID = "template_hfof4hg";
@@ -215,9 +214,9 @@ const deleteRequest = (requestId) => {
 };
 
 // Function to accept a request and create a new appointment
-const acceptRequest = (requestId, date, time) => {
+const acceptRequest = (requestId, date, time,toemail) => {
   var params = {
-    to_name: patient_email,
+    to: toemail,
     doctor_name: doctor.name,
     status: "accepted",
   };
@@ -276,7 +275,7 @@ const createAppointment = (request, date, time) => {
     .then((data) => {
       // Handle the created appointment as needed
       console.log("New appointment created:", data);
-      // location.reload();
+      location.reload();
     })
     .catch((error) => {
       console.error("Error:", error);
