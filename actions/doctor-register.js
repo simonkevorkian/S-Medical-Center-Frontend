@@ -6,7 +6,7 @@ function addUser() {
   const address = document.querySelector('input[name="address"]').value;
   const phone = document.querySelector('input[name="phone"]').value;
   const username = document.querySelector('input[name="username"]').value;
-  const speciality = document.querySelector('input[name="speciality"]').value;
+  const speciality = document.getElementById('speciality').value;
   const calendly = document.querySelector('input[name="calendly"]').value;
 
   const warningMessage = document.getElementById("warningMessage");
