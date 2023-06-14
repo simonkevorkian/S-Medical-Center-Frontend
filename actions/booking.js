@@ -46,16 +46,22 @@ fetch(`https://s-medical-center.onrender.com/doctors/${doctorId}`)
 
       // Update the data-url attribute value
       calendlyWidget.innerHTML = `
-      <div
-                class="calendly-inline-widget"
-                id="calendly-widget"
-                data-url="${doctor.calendly}"
-                style="min-width: 320px; height: 700px"
-              ></div>
+      
+
+              <!-- Calendly link widget begin -->
+<a href="" onclick="Calendly.initPopupWidget({url: '${doctor.calendly}'});return false;">Or book an appointment through calendly</a>
+<!-- Calendly link widget end -->
               
               `;
     }
   });
+
+  // <div
+  // class="calendly-inline-widget"
+  // id="calendly-widget"
+  // data-url="${doctor.calendly}"
+  // style="min-width: 320px; height: 700px"
+// ></div>
 
 let today = new Date().toISOString().split("T")[0];
 document.getElementById("appointment-date").min = today;
