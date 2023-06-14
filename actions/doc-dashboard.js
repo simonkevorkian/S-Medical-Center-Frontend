@@ -67,6 +67,7 @@ fetch(`https://s-medical-center.onrender.com/appointments/doctor/${userId}`)
     console.error("Error:", error);
   });
 
+var patient_email;
 // Make an HTTP GET request to the API endpoint
 fetch(`https://s-medical-center.onrender.com/requests/doctor/${userId}`)
   .then((response) => response.json())
@@ -79,8 +80,6 @@ fetch(`https://s-medical-center.onrender.com/requests/doctor/${userId}`)
       if (request.status === "pending") {
         // Get the user ID from the request
         const patientId = request.patient_id;
-
-        
 
         // Fetch the user's name from the users table
         fetch(`https://s-medical-center.onrender.com/patients/${patientId}`)
@@ -102,6 +101,7 @@ fetch(`https://s-medical-center.onrender.com/requests/doctor/${userId}`)
             const nameLink = document.createElement("a");
             nameLink.href = "#";
             nameLink.textContent = ` ${user.username}`;
+            patient_email = user.username;
             nameCell.appendChild(nameLink);
             row.appendChild(nameCell);
 
@@ -172,6 +172,18 @@ fetch(`https://s-medical-center.onrender.com/requests/doctor/${userId}`)
 
 // Function to delete a request by its ID
 const deleteRequest = (requestId) => {
+  var params = {
+    to_name: patient_email,
+    doctor_name: doctor.name,
+    status: "rejected",
+  };
+
+  const serviceID = "service_tukqhvw";
+  const templateID = "template_hfof4hg";
+
+  emailjs.send(serviceID, templateID, params)
+    .then((res) => console.log(res))
+    .catch((err) => console.log(err));
   // Fetch the request details
   fetch(`https://s-medical-center.onrender.com/requests/${requestId}`)
     .then((response) => response.json())
@@ -204,6 +216,18 @@ const deleteRequest = (requestId) => {
 
 // Function to accept a request and create a new appointment
 const acceptRequest = (requestId, date, time) => {
+  var params = {
+    to_name: patient_email,
+    doctor_name: doctor.name,
+    status: "accepted",
+  };
+
+  const serviceID = "service_tukqhvw";
+  const templateID = "template_hfof4hg";
+
+  emailjs.send(serviceID, templateID, params)
+    .then((res) => console.log(res))
+    .catch((err) => console.log(err));
   // Make an HTTP GET request to fetch the request details
   fetch(`https://s-medical-center.onrender.com/requests/${requestId}`)
     .then((response) => response.json())
@@ -252,7 +276,7 @@ const createAppointment = (request, date, time) => {
     .then((data) => {
       // Handle the created appointment as needed
       console.log("New appointment created:", data);
-      location.reload();
+      // location.reload();
     })
     .catch((error) => {
       console.error("Error:", error);

@@ -83,6 +83,7 @@ bookingButton.addEventListener("click", async () => {
   //getpatientID
   let patient = JSON.parse(localStorage.getItem("user"));
   let patient_id = patient.id;
+  let patient_name = patient.username;
 
   // Get date and time from form inputs
   let appointmentDate = document.getElementById("appointment-date").value;
@@ -122,12 +123,20 @@ bookingButton.addEventListener("click", async () => {
 
       console.log(doctor_email);
 
-      
+      var params = {
+        to_name: doctor_email,
+        name: patient_name
+      };
+
+      const serviceID = "service_tukqhvw";
+      const templateID = "template_sdbc02c";
+
+      emailjs
+        .send(serviceID, templateID, params)
+        .then((res) => console.log(res))
+        .catch((err) => console.log(err));
 
       console.log("done");
-
-
-
     } else {
       // If there was an error, show it
       let errorMessage = await response.text();
