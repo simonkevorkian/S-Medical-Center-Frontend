@@ -19,6 +19,16 @@
     <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css" />
 
     <link rel="stylesheet" href="assets/css/style.css" />
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("R1qmcrOPhMaUdBual");
+      })();
+    </script>
   </head>
   <body>
     <!-- Main Wrapper -->
@@ -154,10 +164,7 @@
               </form>
 
               <h4 id="calendlyh">Or book an appointment through calendly :</h4>
-              <div
-                id="calendly-widget1"
-                
-              ></div>
+              <div id="calendly-widget1"></div>
 
               <br /><br />
             </div>
@@ -265,15 +272,13 @@
 
     <script src="assets/js/script.js"></script>
     <script src="actions/booking.js"></script>
-    
+
     <script
       type="text/javascript"
       src="https://assets.calendly.com/assets/external/widget.js"
       async
     ></script>
 
-    <script src="https://smtpjs.com/v3/smtp.js">
-    </script>
-    
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
   </body>
 </html>
